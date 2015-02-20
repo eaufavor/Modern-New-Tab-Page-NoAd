@@ -1,0 +1,215 @@
+﻿{
+	"option_colors": {
+		"message": "Cores"
+	},
+	"option_colors_custom": {
+		"message": "personalizada..."
+	},
+	"cc_backgroundColor": {
+		"message": "cor de fundo"
+	},
+	"cc_tilesColor": {
+		"message": "cor dos tiles"
+	},
+	"cc_ok": {
+		"message": "OK"
+	},
+	"option_backgroundImage": {
+		"message": "Tela de fundo"
+	},
+	"option_backgroundImage_upload": {
+		"message": "Clique aqui para subir sua imagem"
+	},
+	"option_backgroundImage_opacity": {
+		"message": "opacidade:"
+	},
+	"option_backgroundImage_noRepeat": {
+		"message": "no-repeat:"
+	},
+	"option_backgroundImage_adjust": {
+		"message": "ajustar:"
+	},
+	"option_backgroundImage_fill": {
+		"message": "preencher:"
+	},
+	"option_backgroundImage_clearBackground": {
+		"message": "limpar tela de fundo"
+	},
+	"option_tilesSize": {
+		"message": "Tamanho dos tiles"
+	},
+	"option_moreOptions": {
+		"message": "Mais opções..."
+	},
+	"mo_visibleRows": {
+		"message": "Linhas visíveis #:"
+	},
+	"mo_visibleRows_desc": {
+		"message": "(deixe 0 para calcular automaticamente)"
+	},
+	"mo_visibleColumns": {
+		"message": "Colunas visíveis #:"
+	},
+	"mo_visibleColumns_desc": {
+		"message": "(um tile pequeno é uma coluna, deixe 0 para calcular automaticamente)"
+	},
+	"mo_inicialTilesAnimation": {
+		"message": "Animação inicial dos tiles:"
+	},
+	"mo_inicialTilesAnimation_desc": {
+		"message": "(pequena animação quando você abre uma nova aba)"
+	},
+	"mo_inicialTilesAnimation_animationSpeed": {
+		"message": "Velocidade:"
+	},
+	"mo_inicialTilesAnimation_preview": {
+		"message": "Visualizar"
+	},
+	"mo_hideAddTileButton": {
+		"message": "Esconder o botão \"Adicionar tile\":"
+	},
+	"mo_hideAddTileButton_desc": {
+		"message": "(vai aparacer quando você passar o mouse sobre ele)"
+	},
+	"mo_showRecentlyClosedTabs": {
+		"message": "Mostrar guias recentemente fechadas:"
+	},
+	"mo_showRecentlyClosedTabs_desc": {
+		"message": "(pequeno botão no rodapé)"
+	},
+	"mo_showBookmarks": {
+		"message": "Mostar favoritos:"
+	},
+	"mo_showBookmarks_desc": {
+		"message": "(pequeno botão no rodapé)"
+	},
+	"mo_showAppsSeparatePage": {
+		"message": "Mostrar aplicativos em uma página separada:"
+	},
+	"mo_showAppsSeparatePage_desc": {
+		"message": "(ao invés de um botão no rodapé)"
+	},
+	"mo_footerPosition": {
+		"message": "Posição do rodapé:"
+	},
+	"mo_footerPosition_desc": {
+		"message": "(Botões Favoritos e Guias recentemente fechadas)"
+	},
+	"mo_footerPosition_topLeft": {
+		"message": "Superior esquerda"
+	},
+	"mo_footerPosition_topRight": {
+		"message": "Superior direita"
+	},
+	"mo_footerPosition_bottomLeft": {
+		"message": "Inferior esquerda"
+	},
+	"mo_footerPosition_bottomRight": {
+		"message": "Inferior direita"
+	},
+	"mo_export": {
+		"message": "Exportar tiles e configurações..."
+	},
+	"mo_import": {
+		"message": "Importar tiles e configurações..."
+	},
+	"mo_reset": {
+		"message": "Reiniciar tiles e tema."
+	},
+	"mo_reset_title": {
+		"message": "Reiniciar tiles e tema."
+	},
+	"mo_reset_desc1": {
+		"message": "Você está prestes a reiniciar todas as configurações para os valores padrões."
+	},
+	"mo_reset_desc2": {
+		"message": "Tem certeza de que deseja continuar?"
+	},
+	"tileConfigurations": {
+		"message": "Configurações do tile"
+	},
+	"tc_tilePreview": {
+		"message": "Visualização:"
+	},
+	"tc_siteUrl": {
+		"message": "URL (obrigatório)"
+	},
+	"tc_siteUrl_desc": {
+		"message": "Tentaremos coletar o máximo de informações possível sobre o site para você"
+	},
+	"tc_siteName": {
+		"message": "Nome do site (obrigatório)"
+	},
+	"tc_RSS": {
+		"message": "RSS"
+	},
+	"tc_tileImage": {
+		"message": "Imagem do tile"
+	},
+	"tc_tileImage_fromComputer": {
+		"message": "do seu computador"
+	},
+	"tc_tileImage_fromLink": {
+		"message": "de um link"
+	},
+	"tc_tileImage_fromLink_title": {
+		"message": "Insira aqui o link da sua imagem"
+	},
+	"tc_tileImage_fromLink_ok": {
+		"message": "ok"
+	},
+	"tc_tileImage_fromList": {
+		"message": "de uma lista"
+	},
+	"tc_tileImage_fromList_title": {
+		"message": "Selecione a imagem que você quer para esse tile."
+	},
+	"tc_tileImage_remove": {
+		"message": "remover imagem"
+	},
+	"tc_tileColor": {
+		"message": "Cor do tile"
+	},
+	"tc_fontColor": {
+		"message": "Cor da fonte"
+	},
+	"tc_save": {
+		"message": "salvar"
+	},
+	"tc_remove": {
+		"message": "remover"
+	},
+	"tc_alert_url": {
+		"message": "Por favor, insira a url do site."
+	},
+	"tc_alert_name": {
+		"message": "Por favor, insira o nome do site."
+	},
+	"tc_alert_url_name": {
+		"message": "Por favor, insira o nome e url do site."
+	},
+	"tc_alert_invalidImage": {
+		"message": "Por favor, selecione um arquivo de imagem."
+	},
+	"bookmarks": {
+		"message": "Favoritos"
+	},
+	"apps": {
+		"message": "Aplicativos"
+	},
+	"recentlyClosedTabs": {
+		"message": "Guias recentemente fechadas"
+	},
+	"alert_ok": {
+		"message": "OK"
+	},
+	"alert_yes": {
+		"message": "SIM"
+	},
+	"alert_no": {
+		"message": "NÃO"
+	},
+	"applist_remove": {
+		"message": "Remover do Google Chrome"
+	}
+}

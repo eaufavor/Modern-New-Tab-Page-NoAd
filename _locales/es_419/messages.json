@@ -1,0 +1,215 @@
+{
+   "alert_no": {
+      "message": "NO"
+   },
+   "alert_ok": {
+      "message": "ACEPTAR"
+   },
+   "alert_yes": {
+      "message": "SI"
+   },
+   "applist_remove": {
+      "message": "Quitar de Google Chrome"
+   },
+   "apps": {
+	  "message": "Apps"
+   },
+   "bookmarks": {
+      "message": "Marcadores"
+   },
+   "cc_backgroundColor": {
+      "message": "color de fondo"
+   },
+   "cc_ok": {
+      "message": "ACEPTAR"
+   },
+   "cc_tilesColor": {
+      "message": "color mosaico"
+   },
+   "mo_export": {
+      "message": "Exportar mosaicos y configuración..."
+   },
+   "mo_footerPosition": {
+      "message": "Posición pie de página:"
+   },
+   "mo_footerPosition_bottomLeft": {
+      "message": "Abajo izquierda"
+   },
+   "mo_footerPosition_bottomRight": {
+      "message": "Abajo derecha"
+   },
+   "mo_footerPosition_desc": {
+      "message": "(Marcadores y Pestañas recientes)"
+   },
+   "mo_footerPosition_topLeft": {
+      "message": "Arriba izquierda"
+   },
+   "mo_footerPosition_topRight": {
+      "message": "Arriba derecha"
+   },
+   "mo_hideAddTileButton": {
+      "message": "Ocultar botón \"Agregar (+)\":"
+   },
+   "mo_hideAddTileButton_desc": {
+      "message": "(aparecerá cuando el cursor esté encima)"
+   },
+   "mo_import": {
+      "message": "Importar mosaicos y configuración..."
+   },
+   "mo_inicialTilesAnimation": {
+      "message": "Animación inicial de mosaicos:"
+   },
+   "mo_inicialTilesAnimation_animationSpeed": {
+      "message": "Velocidad:"
+   },
+   "mo_inicialTilesAnimation_desc": {
+      "message": "(animación al abrir una nueva pestaña)"
+   },
+   "mo_inicialTilesAnimation_preview": {
+      "message": "Ver"
+   },
+   "mo_reset": {
+      "message": "Reinicializar mosaicos y tema."
+   },
+   "mo_reset_desc1": {
+      "message": "Estás a punto de reinicializar la configuración."
+   },
+   "mo_reset_desc2": {
+      "message": "¿Seguro que querés continuar?"
+   },
+   "mo_reset_title": {
+      "message": "Reinicializar mosaicos y tema."
+   },
+   "mo_showBookmarks": {
+      "message": "Mostrar Marcadores:"
+   },
+   "mo_showBookmarks_desc": {
+      "message": "(botón abajo a la derecha)"
+   },
+   "mo_showAppsSeparatePage": {
+	  "message": "Show apps on a separate page:"
+   },
+   "mo_showAppsSeparatePage_desc": {
+	  "message": "(instead of a button at the footer)"
+   },
+   "mo_showRecentlyClosedTabs": {
+      "message": "Mostrar Pestañas recientes:"
+   },
+   "mo_showRecentlyClosedTabs_desc": {
+      "message": "(botón abajo a la derecha)"
+   },
+   "mo_visibleColumns": {
+      "message": "Columnas visibles #:"
+   },
+   "mo_visibleColumns_desc": {
+      "message": "(un mosaico pequeño es una columna, indicá 0 para calcular automáticamente)"
+   },
+   "mo_visibleRows": {
+      "message": "Filas visibles #:"
+   },
+   "mo_visibleRows_desc": {
+      "message": "(indicá 0 para calcular automáticamente)"
+   },
+   "option_backgroundImage": {
+      "message": "Imagen de fondo"
+   },
+   "option_backgroundImage_adjust": {
+      "message": "ajustar:"
+   },
+   "option_backgroundImage_clearBackground": {
+      "message": "quitar fondo"
+   },
+   "option_backgroundImage_fill": {
+      "message": "relleno:"
+   },
+   "option_backgroundImage_noRepeat": {
+      "message": "sin repetición:"
+   },
+   "option_backgroundImage_opacity": {
+      "message": "opacidad:"
+   },
+   "option_backgroundImage_upload": {
+      "message": "click para buscar una imagen"
+   },
+   "option_colors": {
+      "message": "Colores"
+   },
+   "option_colors_custom": {
+      "message": "presonalizado..."
+   },
+   "option_moreOptions": {
+      "message": "Mas opciones..."
+   },
+   "option_tilesSize": {
+      "message": "Tamaño de mosaicos"
+   },
+   "recentlyClosedTabs": {
+      "message": "Pestañas recientes"
+   },
+   "tc_RSS": {
+      "message": "RSS"
+   },
+   "tc_alert_invalidImage": {
+      "message": "Seleccioná una imagen."
+   },
+   "tc_alert_name": {
+      "message": "Nombre de sitio."
+   },
+   "tc_alert_url": {
+      "message": "Dirección de sitio."
+   },
+   "tc_alert_url_name": {
+      "message": "Nombre y dirección de sitio."
+   },
+   "tc_fontColor": {
+      "message": "Fuente"
+   },
+   "tc_remove": {
+      "message": "quitar"
+   },
+   "tc_save": {
+      "message": "guardar"
+   },
+   "tc_siteName": {
+      "message": "Nombre (requerido)"
+   },
+   "tc_siteUrl": {
+      "message": "Dirección (requerido):"
+   },
+   "tc_siteUrl_desc": {
+      "message": "Buscaremos la información para este sitio"
+   },
+   "tc_tileColor": {
+      "message": "Mosaico"
+   },
+   "tc_tileImage": {
+      "message": "Imagen mosaico"
+   },
+   "tc_tileImage_fromComputer": {
+      "message": "desde tu computadora"
+   },
+   "tc_tileImage_fromLink": {
+      "message": "desde una dirección"
+   },
+   "tc_tileImage_fromLink_ok": {
+      "message": "aceptar"
+   },
+   "tc_tileImage_fromLink_title": {
+      "message": "Escribí acá la dirección de la imagen"
+   },
+   "tc_tileImage_fromList": {
+      "message": "desde una lista"
+   },
+   "tc_tileImage_fromList_title": {
+      "message": "Elegí la imagen para el mosaico."
+   },
+   "tc_tileImage_remove": {
+      "message": "quitar imagen"
+   },
+   "tc_tilePreview": {
+      "message": "Vista previa mosaico:"
+   },
+   "tileConfigurations": {
+      "message": "Configuración de mosaico"
+   }
+}

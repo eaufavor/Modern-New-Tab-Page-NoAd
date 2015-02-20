@@ -1,0 +1,206 @@
+﻿{
+   "alert_no": {
+      "message": "否"
+   },
+   "alert_ok": {
+      "message": "确定"
+   },
+   "alert_yes": {
+      "message": "是"
+   },
+   "applist_remove": {
+      "message": "从 Google Chrome 移除"
+   },
+   "bookmarks": {
+      "message": "书签"
+   },
+   "cc_backgroundColor": {
+      "message": "背景颜色"
+   },
+   "cc_ok": {
+      "message": "确定"
+   },
+   "cc_tilesColor": {
+      "message": "磁贴颜色"
+   },
+   "mo_export": {
+      "message": "导出磁贴和设置..."
+   },
+   "mo_footerPosition": {
+      "message": "页脚位置:"
+   },
+   "mo_footerPosition_bottomLeft": {
+      "message": "左下"
+   },
+   "mo_footerPosition_bottomRight": {
+      "message": "右下"
+   },
+   "mo_footerPosition_desc": {
+      "message": "(书签和最近关闭的标签页位置)"
+   },
+   "mo_footerPosition_topLeft": {
+      "message": "左上"
+   },
+   "mo_footerPosition_topRight": {
+      "message": "右上"
+   },
+   "mo_hideAddTileButton": {
+      "message": "隐藏 添加此贴 (+) 按钮:"
+   },
+   "mo_hideAddTileButton_desc": {
+      "message": "(将仅会在鼠标移上时出现)"
+   },
+   "mo_import": {
+      "message": "导入磁贴和设置..."
+   },
+   "mo_inicialTilesAnimation": {
+      "message": "初始化图贴动画:"
+   },
+   "mo_inicialTilesAnimation_animationSpeed": {
+      "message": "动画速度:"
+   },
+   "mo_inicialTilesAnimation_desc": {
+      "message": "(在打开新标签页时出现的微小的动画效果)"
+   },
+   "mo_inicialTilesAnimation_preview": {
+      "message": "预览"
+   },
+   "mo_reset": {
+      "message": "重置磁贴和主题"
+   },
+   "mo_reset_desc1": {
+      "message": "您将重置一切设置，确定要继续吗？"
+   },
+   "mo_reset_desc2": {
+      "message": ""
+   },
+   "mo_reset_title": {
+      "message": "重置磁贴和主题"
+   },
+   "mo_showBookmarks": {
+      "message": "显示书签:"
+   },
+   "mo_showBookmarks_desc": {
+      "message": "(右下方的按钮)"
+   },
+   "mo_showRecentlyClosedTabs": {
+      "message": "显示最近关闭的标签页:"
+   },
+   "mo_showRecentlyClosedTabs_desc": {
+      "message": "(右下方的按钮)"
+   },
+   "mo_visibleColumns": {
+      "message": "可见行 格数:"
+   },
+   "mo_visibleColumns_desc": {
+      "message": "(每个最小的磁贴为一格，输入 0 自动排列)"
+   },
+   "mo_visibleRows": {
+      "message": "可见列 格数:"
+   },
+   "mo_visibleRows_desc": {
+      "message": "(输入 0 自动排列)"
+   },
+   "option_backgroundImage": {
+      "message": "背景图片"
+   },
+   "option_backgroundImage_adjust": {
+      "message": "适应:"
+   },
+   "option_backgroundImage_clearBackground": {
+      "message": "清除背景图片"
+   },
+   "option_backgroundImage_fill": {
+      "message": "填充:"
+   },
+   "option_backgroundImage_noRepeat": {
+      "message": "不平铺:"
+   },
+   "option_backgroundImage_opacity": {
+      "message": "透明度:"
+   },
+   "option_backgroundImage_upload": {
+      "message": "点击上传图片"
+   },
+   "option_colors": {
+      "message": "颜色"
+   },
+   "option_colors_custom": {
+      "message": "自定义..."
+   },
+   "option_moreOptions": {
+      "message": "更多选项"
+   },
+   "option_tilesSize": {
+      "message": "磁贴大小"
+   },
+   "recentlyClosedTabs": {
+      "message": "最近关闭的标签页"
+   },
+   "tc_RSS": {
+      "message": "RSS"
+   },
+   "tc_alert_invalidImage": {
+      "message": "Please select an image file."
+   },
+   "tc_alert_name": {
+      "message": "Please, enter the site name."
+   },
+   "tc_alert_url": {
+      "message": "Please, enter the site url."
+   },
+   "tc_alert_url_name": {
+      "message": "Please, enter the site name and url."
+   },
+   "tc_fontColor": {
+      "message": "字体颜色"
+   },
+   "tc_remove": {
+      "message": "移除此磁贴"
+   },
+   "tc_save": {
+      "message": "保存"
+   },
+   "tc_siteName": {
+      "message": "站点名称 (必须)"
+   },
+   "tc_siteUrl": {
+      "message": "站点地址 (必须)"
+   },
+   "tc_siteUrl_desc": {
+      "message": "我们将尝试从此网站获取尽可能多的信息"
+   },
+   "tc_tileColor": {
+      "message": "磁贴颜色"
+   },
+   "tc_tileImage": {
+      "message": "磁贴图片"
+   },
+   "tc_tileImage_fromComputer": {
+      "message": "从电脑上传"
+   },
+   "tc_tileImage_fromLink": {
+      "message": "外部链接"
+   },
+   "tc_tileImage_fromLink_ok": {
+      "message": "确定"
+   },
+   "tc_tileImage_fromLink_title": {
+      "message": "在这里输入图片地址"
+   },
+   "tc_tileImage_fromList": {
+      "message": "来自图片列表"
+   },
+   "tc_tileImage_fromList_title": {
+      "message": "选择磁贴图片"
+   },
+   "tc_tileImage_remove": {
+      "message": "移除图像"
+   },
+   "tc_tilePreview": {
+      "message": "磁贴预览"
+   },
+   "tileConfigurations": {
+      "message": "磁贴配置"
+   }
+}

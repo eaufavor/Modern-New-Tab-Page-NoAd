@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Modern New Tab Page",
+  "description": "Modern New Tab Page replaces the traditional new tab page by a new beautiful and elegant one, made of customizable live tiles.",
+  "version": "2015.2.20",
+  "incognito": "split",
+  "icons": { 
+	"16":  "icon16.png",
+	"48":  "icon48.png",
+	"128": "icon128.png" 
+  },
+  "chrome_url_overrides": {
+    "newtab": "Default.html"
+  },
+  "permissions": [
+		"chrome://favicon/",
+		"unlimitedStorage",
+		"management",
+		"history",
+		"bookmarks",
+    "webRequest", 
+    "webRequestBlocking"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "options_page": "options.html",
+  "default_locale": "en_US",
+  "manifest_version": 2
+}

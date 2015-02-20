@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>New tab</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="js/colorPicker/css/colorpicker.css" rel="stylesheet" />
+
+    <!--    
+    <link href="css/style.min.css?v=20140120" rel="stylesheet" type="text/css" />
+    <link href="js/colorPicker/css/colorpicker.min.css?v=20140120" rel="stylesheet" />
+    <script src="js/GDrive.js"></script>
+    <script src="js/gdriveclient.js?onload=GDrive.handleClientLoad"></script>
+    -->
+</head>
+<body class="BGColor">
+    <div class="content">
+        <input type="file" id="filePicker" style="display: none" />
+        <input type="button" id="authorizeButton" style="display: none" value="Authorize" />
+
+        <div class="bg"></div>
+
+        <span id="spnTeste"></span>
+
+        <div class="main pausado" id="main" >
+        </div>
+        
+        <div class="main pausado" id="mainApps" style="-webkit-transform: translate(5000px);">
+        </div>
+
+        <div class="pesquisa" style="display: none;">
+            <div class="pesquisaTop">
+                <input type="text" id="txtSearch" />
+            </div>
+
+            <div class="results" style="display:none;">
+            </div>
+        </div>
+        
+        <div class="goLeft" style="display: none;"></div>
+        <div class="goRight"></div>
+
+        <a class="btConfig"></a>
+        <a class="btnAddTileNew"></a>
+
+        <div class="config">
+            <p data-message="option_colors">Colors</p>
+            <div class="temas">
+                <div class="listaCores">
+                    <div class="configSelectedColorBg">
+                        <div class="configSelectedColorTile"></div>
+                    </div>
+                    
+
+                    <div class="moreColors">
+                        <a id="btnCustomColor" data-message="option_colors_custom">custom...</a>
+                    </div>
+                </div>
+
+                <div style="clear: both;"></div>
+                
+            </div>
+
+            <p data-message="option_backgroundImage">Background image</p>
+            <div class="backgrounds">
+                <div class="suboption">
+                    <a id="btnBackgroundImage" data-message="option_backgroundImage_upload">click here to upload your image...</a>
+                    <div class="campo" style="margin-top: 10px;">
+                        <span data-message="option_backgroundImage_opacity">
+                            opacity:&nbsp;
+                        </span> 
+                        <input id="txtOpacity" type="number" value="0.8" min="0" max="1" step=".1" />
+                    </div>
+                    <div class="campo">
+                        <span>
+                            <label for="chkNoRepeat" data-message="option_backgroundImage_noRepeat">no-repeat:</label>
+                        </span>
+                        <input type="checkbox" id="chkNoRepeat" name="chkNoRepeat" checked="checked" />
+                    </div>
+                    <div class="campo">
+                        <span>
+                            <label for="chkAdjust" data-message="option_backgroundImage_adjust">adjust:</label>
+                        </span>
+                        <input type="checkbox" id="chkAdjust" name="chkAdjust" />
+                    </div>
+                    <div class="campo">
+                        <span>
+                            <label for="chkFill" data-message="option_backgroundImage_fill">fill:</label>
+                        </span>
+                        <input type="checkbox" id="chkFill" name="chkFill" />
+                    </div>
+
+                    <a id="btnRemoveBackground" style="display: none; position: relative; top: 6px;" data-message="option_backgroundImage_clearBackground">clear background</a>
+
+                    <div style="clear:both;"></div>
+                    <br>
+                </div>
+            </div>
+
+            <p data-message="option_tilesSize">Tiles size</p>
+            <div class="tilesSize">
+                <div class="suboption" style="width: 200px; position: relative; left: 5px;">
+                    <div id="sliderTilesSize"></div>
+                    <span class="spnSlider">100%</span>
+                </div>
+            </div>
+
+            <p class="cMoreOptions" data-message="option_moreOptions">More options...</p>
+        </div>
+        <input type="file" id="upBackgroundImage" style="display: none;" />
+
+        <div class="configTile">
+            <div class="close"></div>
+            <div class="loader">
+                <img src="imgs/loading.gif" />
+            </div>
+
+            <h2 data-message="tileConfigurations">Tile configurations</h2>
+            <span class="details" data-message="tc_tilePreview">Tile preview:</span>
+
+            <div class="preview">
+
+            </div>
+
+            <span data-message="tc_siteUrl">Site URL (required)</span>
+            <span class="details" data-message="tc_siteUrl_desc">We will try to get as many information as possible from the site for you</span>
+            <input type="text" id="txtUrl" style="width: 288px;" />
+
+            <span data-message="tc_siteName">Site name (required)</span>
+            <input type="text" id="txtNome" style="width: 144px" />
+
+            <span data-message="tc_RSS">RSS</span>
+            <input type="text" id="txtRss" style="width: 288px;" />
+
+            <div style="float: left; width: 149px;">
+                <span data-message="tc_tileImage">Tile image</span>
+                <input type="file" id="upImage" style="display: none;" />
+                <a id="btnUploadImage" data-message="tc_tileImage_fromComputer">from your computer</a><br />
+                <a id="btnUrlImage" data-message="tc_tileImage_fromLink">from a link</a><br />
+                <a id="btnListImage" data-message="tc_tileImage_fromList">from a list of images</a><br />
+                <a id="btnRemoveImage" data-message="tc_tileImage_remove">remove image</a>
+            </div>
+
+            <div class="cores">
+                <div>
+                    <span data-message="tc_tileColor">Tile color</span>
+
+                    <div id="divTileColor" class="selectedConfigColor"></div>
+                </div>
+
+                <div>
+                    <span data-message="tc_fontColor">Font color</span>
+
+                    <div id="divFontColor" class="selectedConfigColor"></div>
+                </div>
+            </div>
+            
+            <div class="configButtons">
+                <input type="button" value="remove" class="btnRemove" data-message-value="tc_remove" />
+                <input type="button" value="save " class="btnSave" data-message-value="tc_save" />
+            </div>
+        </div>
+
+        <div class="imageList">
+            <div class="title">
+                <span data-message="tc_tileImage_fromList_title">Choose the image you want for this tile.</span>
+                <div class="close"></div>
+            </div>
+            <div class="list">
+                <img src="about:blank" data-src="imgs/tiles/AIM.png" title="AIM" />
+                <img src="about:blank" data-src="imgs/tiles/YouTube1.png" title="YouTube" />
+                <img src="about:blank" data-src="imgs/tiles/Allvoices.png" title="All Voices" />
+                <img src="about:blank" data-src="imgs/tiles/Amazon.png" title="Amazon" />
+                <img src="about:blank" data-src="imgs/tiles/Android.png" title="Android" />
+                <img src="about:blank" data-src="imgs/tiles/AOL%20Mail.png" title="AOL Mail" />
+                <img src="about:blank" data-src="imgs/tiles/Apple.png" title="Apple" />
+                <img src="about:blank" data-src="imgs/tiles/Arto.png" title="Arto" />
+                <img src="about:blank" data-src="imgs/tiles/Ask.com.png" title="Ask.com" />
+                <img src="about:blank" data-src="imgs/tiles/Backflip.png" title="Backflip" />
+                <img src="about:blank" data-src="imgs/tiles/Bebo.png" title="Bebo" />
+                <img src="about:blank" data-src="imgs/tiles/BipSonomy.png" title="BipSonomy" />
+                <img src="about:blank" data-src="imgs/tiles/Bitty%20Browser.png" title="Bitty Browser" />
+                <img src="about:blank" data-src="imgs/tiles/Blinklist.png" title="Blinklist" />
+                <img src="about:blank" data-src="imgs/tiles/Blogger%20Post.png" title="Blogger" />
+                <img src="about:blank" data-src="imgs/tiles/Blogger.png" title="Blogger" />
+                <img src="about:blank" data-src="imgs/tiles/Blogmarks.png" title="Blogmarks" />
+                <img src="about:blank" data-src="imgs/tiles/Bookmarks.fr.png" title="Bookmarks" />
+                <img src="about:blank" data-src="imgs/tiles/Box.net.png" title="Box.net" />
+                <img src="about:blank" data-src="imgs/tiles/Brightkite.png" title="Brightkite" />
+                <img src="about:blank" data-src="imgs/tiles/BuddyMarks.png" title="Buddy Marks" />
+                <img src="about:blank" data-src="imgs/tiles/Care2%20News.png" title="Care2 News" />
+                <img src="about:blank" data-src="imgs/tiles/Chrome.png" title="Chrome" />
+                <img src="about:blank" data-src="imgs/tiles/Connotea.png" title="Connotea" />
+                <img src="about:blank" data-src="imgs/tiles/Delicious.png" title="Delicious" />
+                <img src="about:blank" data-src="imgs/tiles/Design%20Float.png" title="Design Float" />
+                <img src="about:blank" data-src="imgs/tiles/Designmoo.png" title="Designmoo" />
+                <img src="about:blank" data-src="imgs/tiles/DeviantART.png" title="DeviantART" />
+                <img src="about:blank" data-src="imgs/tiles/Digg.png" title="Digg" />
+                <img src="about:blank" data-src="imgs/tiles/Digg1.png" title="Digg" />
+                <img src="about:blank" data-src="imgs/tiles/Diigo.png" title="Diigo" />
+                <img src="about:blank" data-src="imgs/tiles/Dynamics%20CRM.png" title="Dynamics CRM" />
+                <img src="about:blank" data-src="imgs/tiles/DZone.png" title="DZone" />
+                <img src="about:blank" data-src="imgs/tiles/Ebay.png" title="Ebay" />
+                <img src="about:blank" data-src="imgs/tiles/Evernote.png" title="Evernote" />
+                <img src="about:blank" data-src="imgs/tiles/Expression.png" title="Expression" />
+                <img src="about:blank" data-src="imgs/tiles/Facebook.png" title="Facebook" />
+                <img src="about:blank" data-src="imgs/tiles/Faves.png" title="Faves" />
+                <img src="about:blank" data-src="imgs/tiles/Firefox.png" title="Firefox" />
+                <img src="about:blank" data-src="imgs/tiles/Flickr.png" title="Flickr" />
+                <img src="about:blank" data-src="imgs/tiles/Flickr2.png" title="Flickr" />
+                <img src="about:blank" data-src="imgs/tiles/Folkd.png" title="Folkd" />
+                <img src="about:blank" data-src="imgs/tiles/Foxiewire.png" title="Foxiewire" />
+                <img src="about:blank" data-src="imgs/tiles/FriendFeed.png" title="FriendFeed" />
+                <img src="about:blank" data-src="imgs/tiles/Friendster.png" title="Friendster" />
+                <img src="about:blank" data-src="imgs/tiles/Gabbr.png" title="Gabbr" />
+                <img src="about:blank" data-src="imgs/tiles/Gamespot.png" title="Gamespot" />
+                <img src="about:blank" data-src="imgs/tiles/GMail.png" title="GMail" />
+                <img src="about:blank" data-src="imgs/tiles/Google-Talk.png" title="Google Talk" />
+                <img src="about:blank" data-src="imgs/tiles/Google%20Chrome.png" title="Google Chrome" />
+                <img src="about:blank" data-src="imgs/tiles/Google%20Plus.png" title="Google Plus" />
+                <img src="about:blank" data-src="imgs/tiles/Google%20Search.png" title="Google Search" />
+                <img src="about:blank" data-src="imgs/tiles/Google.png" title="Google" />
+                <img src="about:blank" data-src="imgs/tiles/Hotmail.png" title="Hotmail" />
+                <img src="about:blank" data-src="imgs/tiles/IBM%20lotus%20notes.png" title="IBM Lotus Notes" />
+                <img src="about:blank" data-src="imgs/tiles/ICQ.png" title="ICQ" />
+                <img src="about:blank" data-src="imgs/tiles/ILike.png" title="ILike" />
+                <img src="about:blank" data-src="imgs/tiles/Internet%20Explorer.png" title="Internet Explorer" />
+                <img src="about:blank" data-src="imgs/tiles/Jump%20Tags.png" title="Jump Tags" />
+                <img src="about:blank" data-src="imgs/tiles/Kledy.png" title="Kledy" />
+                <img src="about:blank" data-src="imgs/tiles/Last.fm.png" title="Last.fm" />
+                <img src="about:blank" data-src="imgs/tiles/Linkatopia.png" title="Linkatopia" />
+                <img src="about:blank" data-src="imgs/tiles/LinkedIn.png" title="LinkedIn" />
+                <img src="about:blank" data-src="imgs/tiles/Linux.png" title="Linux" />
+                <img src="about:blank" data-src="imgs/tiles/LiveJournal.png" title="LiveJournal" />
+                <img src="about:blank" data-src="imgs/tiles/Maple.png" title="Maple" />
+                <img src="about:blank" data-src="imgs/tiles/Meneame.png" title="Meneame" />
+                <img src="about:blank" data-src="imgs/tiles/Metro%20Studio.png" title="Metro Studio" />
+                <img src="about:blank" data-src="imgs/tiles/Microsoft%20Lync.png" title="Microsoft Lync" />
+                <img src="about:blank" data-src="imgs/tiles/Microsoft%20PowerShell.png" title="Microsoft PowerShell" />
+                <img src="about:blank" data-src="imgs/tiles/MindBodyGreen.png" title="Mind Body Green" />
+                <img src="about:blank" data-src="imgs/tiles/Mister-Wong.png" title="Mister-Wong" />
+                <img src="about:blank" data-src="imgs/tiles/Mobile%20Me.png" title="Mobile Me" />
+                <img src="about:blank" data-src="imgs/tiles/Msn.png" title="Msn" />
+                <img src="about:blank" data-src="imgs/tiles/Myspace.png" title="Myspace" />
+                <img src="about:blank" data-src="imgs/tiles/Netlog.png" title="Netlog" />
+                <img src="about:blank" data-src="imgs/tiles/NewsVine.png" title="News Vine" />
+                <img src="about:blank" data-src="imgs/tiles/NowPublic.png" title="Now Public" />
+                <img src="about:blank" data-src="imgs/tiles/Opera.png" title="Opera" />
+                <img src="about:blank" data-src="imgs/tiles/Orkut.png" title="Orkut" />
+                <img src="about:blank" data-src="imgs/tiles/Outlook.png" title="Outlook" />
+                <img src="about:blank" data-src="imgs/tiles/Outlook1.png" title="Outlook" />
+                <img src="about:blank" data-src="imgs/tiles/PhoneFavs.png" title="Phone Favs" />
+                <img src="about:blank" data-src="imgs/tiles/Picasa.png" title="Picasa" />
+                <img src="about:blank" data-src="imgs/tiles/Pinterest.png" title="Pinterest" />
+                <img src="about:blank" data-src="imgs/tiles/Plaxo%20Pulse.png" title="Plaxo Pulse" />
+                <img src="about:blank" data-src="imgs/tiles/Posterous.png" title="Posterous" />
+                <img src="about:blank" data-src="imgs/tiles/Propeller.png" title="Propeller" />
+                <img src="about:blank" data-src="imgs/tiles/Protopage.png" title="Protopage" />
+                <img src="about:blank" data-src="imgs/tiles/Pusha.png" title="Pusha" />
+                <img src="about:blank" data-src="imgs/tiles/Read%20It%20Later.png" title="Read It Later" />
+                <img src="about:blank" data-src="imgs/tiles/Readernaut.png" title="Readernaut" />
+                <img src="about:blank" data-src="imgs/tiles/Reddit.png" title="Reddit" />
+                <img src="about:blank" data-src="imgs/tiles/RSS.png" title="RSS" />
+                <img src="about:blank" data-src="imgs/tiles/Scribd.png" title="Scribd" />
+                <img src="about:blank" data-src="imgs/tiles/Segnalo.png" title="Segnalo" />
+                <img src="about:blank" data-src="imgs/tiles/SharePoint.png" title="SharePoint" />
+                <img src="about:blank" data-src="imgs/tiles/Shoutwire.png" title="Shoutwire" />
+                <img src="about:blank" data-src="imgs/tiles/Skype-1.png" title="Skype" />
+                <img src="about:blank" data-src="imgs/tiles/Skype.png" title="Skype" />
+                <img src="about:blank" data-src="imgs/tiles/Squidoo.png" title="Squidoo" />
+                <img src="about:blank" data-src="imgs/tiles/StumbleUpon.png" title="StumbleUpon" />
+                <img src="about:blank" data-src="imgs/tiles/Stumpedia.png" title="Stumpedia" />
+                <img src="about:blank" data-src="imgs/tiles/Syncfusion.png" title="Syncfusion" />
+                <img src="about:blank" data-src="imgs/tiles/Tagza.png" title="Tagza" />
+                <img src="about:blank" data-src="imgs/tiles/Talk.png" title="Talk" />
+                <img src="about:blank" data-src="imgs/tiles/Technorati.png" title="Technorati" />
+                <img src="about:blank" data-src="imgs/tiles/Technotizie.png" title="Technotizie" />
+                <img src="about:blank" data-src="imgs/tiles/Twitter%20Bird.png" title="Twitter" />
+                <img src="about:blank" data-src="imgs/tiles/Twitter1.png" title="Twitter" />
+                <img src="about:blank" data-src="imgs/tiles/Ubuntu.png" title="Ubuntu" />
+                <img src="about:blank" data-src="imgs/tiles/Viadeo.png" title="Viadeo" />
+                <img src="about:blank" data-src="imgs/tiles/Viddler.png" title="Viddler" />
+                <img src="about:blank" data-src="imgs/tiles/Vimeo.png" title="Vimeo" />
+                <img src="about:blank" data-src="imgs/tiles/Webnews.png" title="Webnews" />
+                <img src="about:blank" data-src="imgs/tiles/Windows%208.png" title="Windows 8" />
+                <img src="about:blank" data-src="imgs/tiles/WordPress.png" title="WordPress" />
+                <img src="about:blank" data-src="imgs/tiles/Yahoo%20Buzz.png" title="Yahoo Buzz" />
+                <img src="about:blank" data-src="imgs/tiles/Yahoo.png" title="Yahoo" />
+                <img src="about:blank" data-src="imgs/tiles/Yahoo1.png" title="Yahoo" />
+                <img src="about:blank" data-src="imgs/tiles/Yelp.png" title="Yelp" />
+                <img src="about:blank" data-src="imgs/tiles/YouTube.png" title="YouTube" />
+            </div>
+        </div>
+
+        <div class="imageUrl">
+            <div class="close"></div>
+            <p data-message="tc_tileImage_fromLink_title">Insert here the link of your image</p>
+            <input type="text" id="txtImageUrl" style="width: 347px;" />
+            <input type="button" value="ok" class="btnOk" data-message-value="tc_tileImage_fromLink_ok" />
+        </div>
+
+        <div class="colorConfig">
+            <div class="close"></div>
+
+            <p>
+                <span data-message="cc_backgroundColor">background color</span>
+                <span data-message="cc_tilesColor">tiles color</span>
+            </p>
+
+            <div id="backgroundColorPicker" class="picker"></div>
+            <div id="tileColorPicker" class="picker" style="margin-left: 15px;"></div>
+
+            <input type="button" id="btnCloseColor" value="OK" data-message-value="cc_ok">
+        </div>
+
+        <div class="moreOptions">
+            <div class="close"></div>
+            <p>
+                <label data-message="mo_visibleRows">Visible rows #:</label>
+                <input id="txtVisibleRows" type="number" value="0" step="1" min="0" max="6" />
+                <br />
+                <span class="details" data-message="mo_visibleRows_desc">(leave 0 to calculate automaticaly)</span>
+            </p>
+
+            <p>
+                <label data-message="mo_visibleColumns">Visible columns #:</label>
+                <input id="txtVisibleColumns" type="number" value="0" step="1" min="0" max="11" />
+                <br />
+                <span class="details" data-message="mo_visibleColumns_desc">
+                    (one small tile is one column, leave 0 to calculate automaticaly)
+                </span>
+            </p>
+
+            <p>
+                <label for="chkTilesAnimation" data-message="mo_inicialTilesAnimation">Initial tiles animation:</label>
+                <input id="chkTilesAnimation" type="checkbox" />
+                <br />
+                <span class="details" data-message="mo_inicialTilesAnimation_desc">(small animation when you open a new tab)</span>
+            </p>
+
+            <p class="pAnimationOptions">
+                <span data-message="mo_inicialTilesAnimation_animationSpeed">Animation speed:</span>
+                <input id="sldAnimationSpeed" type="range" min="0" max="2000" />
+                <span class="test" data-message="mo_inicialTilesAnimation_preview">preview</span>
+            </p>
+            <!--
+            <p>
+                <label for="chkHideAddButton" data-message="mo_hideAddTileButton">Hide the "Add Tile" (+) button:</label> 
+                <input id="chkHideAddButton" type="checkbox" />
+                <br />
+                <span class="details" data-message="mo_hideAddTileButton_desc">(it will show up only on mouse over)</span>
+            </p>
+            -->
+            <p>
+                <label for="chkShowTabs" data-message="mo_showRecentlyClosedTabs">Show recently closed tabs:</label> 
+                <input id="chkShowTabs" type="checkbox" />
+                <br />
+                <span class="details" data-message="mo_showRecentlyClosedTabs_desc">(small button at the footer)</span>
+            </p>
+
+            <p>
+                <label for="chkShowBookmarks" data-message="mo_showBookmarks">Show bookmarks:</label> 
+                <input id="chkShowBookmarks" type="checkbox" />
+                <br />
+                <span class="details" data-message="mo_showBookmarks_desc">(small button at the footer)</span>
+            </p>
+
+            <p>
+                <label for="chkShowAppsSeparatePage" data-message="mo_showAppsSeparatePage">Show apps on a separate page:</label> 
+                <input id="chkShowAppsSeparatePage" type="checkbox" />
+                <br />
+                <span class="details" data-message="mo_showAppsSeparatePage_desc">(instead of a button at the footer)</span>
+            </p>
+
+            <p>
+                <label data-message="mo_footerPosition">Footer position:</label> 
+                <span class="details" data-message="mo_footerPosition_desc">(Bookmarks and Recently closed tabs buttons)</span>
+                
+                <span class="footerPosition">
+                    <input id="rdTopLeft" name="footerPosition" type="radio" title="Top left" data-message-title="mo_footerPosition_topLeft" />
+                    <input id="rdTopRight" name="footerPosition" type="radio" title="Top right" data-message-title="mo_footerPosition_topRight" />
+                    <input id="rdBottomLeft" name="footerPosition" type="radio" title="Bottom left" data-message-title="mo_footerPosition_bottomLeft" />
+                    <input id="rdBottomRight" name="footerPosition" type="radio" title="Bottom right" data-message-title="mo_footerPosition_bottomRight" />
+                </span>
+            </p>
+
+            <p>
+                <label class="btn">
+                    <a id="btnExport" data-message="mo_export">Export tiles and settings...</a>
+                </label>
+            </p>
+
+            <p>
+                <label class="btn" id="btnImport" data-message="mo_import">Import tiles and settings...</label>
+                <input type="file" id="fileImport" style="display: none;" />
+            </p>
+
+            <p>
+                <label class="btn" id="btnReset" data-message="mo_reset">Reset tiles and theme.</label>
+            </p>
+
+        </div>
+
+        <div class="alert">
+            <div class="container">
+                <p class="title"></p>
+                <p class="message"></p>
+
+                <div class="buttons">
+                    <input type="button" class="btnOK" value="OK" data-message-value="alert_ok" />
+                    <input type="button" class="btnYes" value="YES" data-message-value="alert_yes" />
+                    <input type="button" class="btnNo" value="NO" data-message-value="alert_no" />
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            
+            <div class="item closedTabs" id="divClosedTabs" style="display: none;">
+                <p data-message="recentlyClosedTabs">Recently closed tabs</p>
+                <ul style="display: none;">
+                </ul>
+            </div>
+
+            <div class="item bookmarks" id="divBookmarks" style="display: none;">
+                <p data-message="bookmarks">Bookmarks</p>
+                <ul id="ulBookmarks" style="display: none;">
+                </ul>
+            </div>
+
+            <div class="item apps" id="divApps" style="display: none;">
+                <p data-message="apps">Apps</p>
+                <div class="appList" style="display:none;">
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+        </div>
+
+        <div class="appContextMenu" style="display:none;">
+            <ul>
+                <li data-message="applist_remove">Remove from Google Chrome</li>
+            </ul>
+        </div>
+
+        <div id="initMessage">Starting Chrome...</div>
+
+    </div>
+
+<script src="js/jquery-1.8.2.js"></script>
+<script src="js/Tile.js"></script>
+<script src="js/main.js"></script>
+<script src="js/Search.js"></script>
+<script src="js/Config.js"></script>
+<script src="js/lazyloader.js"></script>
+<!--
+<script src="js/colorPicker/js/colorpicker.min.js"></script>
+<script src="js/smoothScroll.js"></script>
+<script src="js/jquery.lightbox_me.js"></script>
+<script src="js/jquery.jfeed.js"></script>
+<script src="js/jquery-ui-1.9.1.custom.min.js"></script>
+-->
+</body>
+</html>

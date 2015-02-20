@@ -1,0 +1,215 @@
+﻿{
+	"option_colors": {
+		"message": "Colors"
+	},
+	"option_colors_custom": {
+		"message": "custom..."
+	},
+	"cc_backgroundColor": {
+		"message": "background color"
+	},
+	"cc_tilesColor": {
+		"message": "tiles color"
+	},
+	"cc_ok": {
+		"message": "OK"
+	},
+	"option_backgroundImage": {
+		"message": "Background image"
+	},
+	"option_backgroundImage_upload": {
+		"message": "click here to upload your image..."
+	},
+	"option_backgroundImage_opacity": {
+		"message": "opacity:"
+	},
+	"option_backgroundImage_noRepeat": {
+		"message": "no-repeat:"
+	},
+	"option_backgroundImage_adjust": {
+		"message": "adjust:"
+	},
+	"option_backgroundImage_fill": {
+		"message": "fill:"
+	},
+	"option_backgroundImage_clearBackground": {
+		"message": "clear background"
+	},
+	"option_tilesSize": {
+		"message": "Tiles size"
+	},
+	"option_moreOptions": {
+		"message": "More options..."
+	},
+	"mo_visibleRows": {
+		"message": "Visible rows #:"
+	},
+	"mo_visibleRows_desc": {
+		"message": "(leave 0 to calculate automaticaly)"
+	},
+	"mo_visibleColumns": {
+		"message": "Visible columns #:"
+	},
+	"mo_visibleColumns_desc": {
+		"message": "(one small tile is one column, leave 0 to calculate automaticaly)"
+	},
+	"mo_inicialTilesAnimation": {
+		"message": "Inicial tiles animation:"
+	},
+	"mo_inicialTilesAnimation_desc": {
+		"message": "(small animation when you open a new tab)"
+	},
+	"mo_inicialTilesAnimation_animationSpeed": {
+		"message": "Animation speed:"
+	},
+	"mo_inicialTilesAnimation_preview": {
+		"message": "Preview"
+	},
+	"mo_hideAddTileButton": {
+		"message": "Hide the \"Add Tile\" (+) button:"
+	},
+	"mo_hideAddTileButton_desc": {
+		"message": "(it will show only on mouse over)"
+	},
+	"mo_showRecentlyClosedTabs": {
+		"message": "Show recently closed tabs:"
+	},
+	"mo_showRecentlyClosedTabs_desc": {
+		"message": "(small button at the footer)"
+	},
+	"mo_showBookmarks": {
+		"message": "Show bookmarks:"
+	},
+	"mo_showBookmarks_desc": {
+		"message": "(small button at the footer)"
+	},
+	"mo_showAppsSeparatePage": {
+		"message": "Show apps on a separate page:"
+	},
+	"mo_showAppsSeparatePage_desc": {
+		"message": "(instead of a button at the footer)"
+	},
+	"mo_footerPosition": {
+		"message": "Footer position:"
+	},
+	"mo_footerPosition_desc": {
+		"message": "(Bookmarks and Recently Closed tabs buttons)"
+	},
+	"mo_footerPosition_topLeft": {
+		"message": "Top left"
+	},
+	"mo_footerPosition_topRight": {
+		"message": "Top right"
+	},
+	"mo_footerPosition_bottomLeft": {
+		"message": "Bottom left"
+	},
+	"mo_footerPosition_bottomRight": {
+		"message": "Bottom right"
+	},
+	"mo_export": {
+		"message": "Export tiles and settings..."
+	},
+	"mo_import": {
+		"message": "Import tiles and settings..."
+	},
+	"mo_reset": {
+		"message": "Reset tiles and theme."
+	},
+	"mo_reset_title": {
+		"message": "Reset tiles and theme."
+	},
+	"mo_reset_desc1": {
+		"message": "You are about to reset all setings to default values."
+	},
+	"mo_reset_desc2": {
+		"message": "Are you sure you want to continue?"
+	},
+	"tileConfigurations": {
+		"message": "Tile configurations"
+	},
+	"tc_tilePreview": {
+		"message": "Tile preview:"
+	},
+	"tc_siteUrl": {
+		"message": "Site URL (required):"
+	},
+	"tc_siteUrl_desc": {
+		"message": "We will try to get as many information as possible from the site for you"
+	},
+	"tc_siteName": {
+		"message": "Site name (required)"
+	},
+	"tc_RSS": {
+		"message": "RSS"
+	},
+	"tc_tileImage": {
+		"message": "Tile image"
+	},
+	"tc_tileImage_fromComputer": {
+		"message": "from your computer"
+	},
+	"tc_tileImage_fromLink": {
+		"message": "from a link"
+	},
+	"tc_tileImage_fromLink_title": {
+		"message": "Insert here the link of your image"
+	},
+	"tc_tileImage_fromLink_ok": {
+		"message": "ok"
+	},
+	"tc_tileImage_fromList": {
+		"message": "from a list of images"
+	},
+	"tc_tileImage_fromList_title": {
+		"message": "Choose the image you want for this tile."
+	},
+	"tc_tileImage_remove": {
+		"message": "remove image"
+	},
+	"tc_tileColor": {
+		"message": "Tile color"
+	},
+	"tc_fontColor": {
+		"message": "Font color"
+	},
+	"tc_save": {
+		"message": "save"
+	},
+	"tc_remove": {
+		"message": "remove"
+	},
+	"tc_alert_url": {
+		"message": "Please, enter the site url."
+	},
+	"tc_alert_name": {
+		"message": "Please, enter the site name."
+	},
+	"tc_alert_url_name": {
+		"message": "Please, enter the site name and url."
+	},
+	"tc_alert_invalidImage": {
+		"message": "Please select an image file."
+	},
+	"bookmarks": {
+		"message": "Bookmarks"
+	},
+	"apps": {
+		"message": "Apps"
+	},
+	"recentlyClosedTabs": {
+		"message": "Recently closed"
+	},
+	"alert_ok": {
+		"message": "OK"
+	},
+	"alert_yes": {
+		"message": "YES"
+	},
+	"alert_no": {
+		"message": "NO"
+	},
+	"applist_remove": {
+		"message": "Remove from Google Chrome"
+	}
+}

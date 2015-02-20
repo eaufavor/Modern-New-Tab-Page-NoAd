@@ -1,0 +1,1 @@
+window.gstart = +new Date;
