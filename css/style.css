@@ -1086,7 +1086,7 @@ input[type=button]:active {
     position: absolute;
     top: 0px;
     right: 0px;
-    background-image: url('../imgs/close.png');
+    background-image: url('../imgs/Close.png');
     z-index: 2;
     background-color: black;
     -webkit-transition:all .2s;
