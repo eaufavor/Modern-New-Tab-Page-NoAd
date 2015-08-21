@@ -7,15 +7,15 @@ I like the Modern New Tab Page extension but Chrome seems starting to disable it
 
 This version has no Ad. Chrome cannot identify it hence Chrome wouldn't disable it.
 
-## Install (if you trust me more)
+## Install (chrome seems to block this way)
 1. Download from [here](http://eaufavor.info/Modern-New-Tab-Page-NoAd.crx) .
 2. Drag the crx file to chrome://extensions/ page.
 
-## Install (if you trust me less)
+## Install (this works so far)
 1. Clone this repo.
-2. Verify the code is safe to use by yourself.
-3. Pack the code using "Pack extension" at chrome://extensions/ page.
-2. Drag the crx file to chrome://extensions/ page.
+2. (optional)Verify the code is safe to use by yourself.
+3. Enable developer mode at chrome://extensions/ page.
+2. Choose "load unpacked extension...", and then select the directory of the repo you just cloned.
 
 ### Redistribution
 If someone dares to publish this version on Chrome Web Store, be my guest.
