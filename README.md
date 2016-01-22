@@ -10,7 +10,7 @@ Chrome will automatically disable it even if one manages to install it from some
 Therefore, I removed the Ads and repacked it with my private key. Chrome cannot identify it hence Chrome wouldn't disable it anymore.
 
 ## Install (chrome seems to block this way)
-1. Download from [here](http://eaufavor.info/Modern-New-Tab-Page-NoAd.crx) .
+1. Download from [here](https://eaufavor.net/Modern-New-Tab-Page-NoAd.crx) .
 2. Drag the crx file to chrome://extensions/ page.
 
 ## Install (this works so far)
@@ -20,11 +20,14 @@ Therefore, I removed the Ads and repacked it with my private key. Chrome cannot 
 2. Choose "load unpacked extension...", and then select the directory of the repo you just cloned.
 
 ### Redistribution
-If someone wants to publish this version on Chrome Web Store, be my guest. 
+If someone wants to publish this version on Chrome Web Store, be my guest.
 
-### Change-log
+### Changelog
+2016.1.22
+Fixed font coloer problem. Add an option to disable slow smooth scroll (TODO: add a knob to adjust scroll speed)
+
 2016.1.1
 Repack the crx file to fix the "This extension may have been corrupted." problem.
 
-2015.2.26 Retrieve permissions to fix RSS. 
+2015.2.26 Retrieve permissions to fix RSS.
 (I lost/changed the packing key also. So it ends up as a new extension if the crx file is is used. Rememberer to export and import the settings from the old extension.)
