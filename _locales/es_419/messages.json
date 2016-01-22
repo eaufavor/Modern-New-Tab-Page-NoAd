@@ -56,6 +56,12 @@
    "mo_import": {
       "message": "Importar mosaicos y configuración..."
    },
+   "mo_smoothScroll": {
+      "message": "Using smooth scroll:"
+   },
+   "mo_smoothScroll_desc": {
+      "message": "(disabling this may increase performance if you have too many tiles)"
+   },
    "mo_inicialTilesAnimation": {
       "message": "Animación inicial de mosaicos:"
    },

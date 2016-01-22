@@ -69,6 +69,24 @@ Config.getColumnNumber = function () {
         return parseInt(Storage.columnNumber);
 }
 
+Config.setSmoothScroll = function (smooth) {
+    if (smooth == true)
+        Storage.smoothScroll = 1;
+    else
+        Storage.smoothScroll = 0;
+}
+
+
+Config.getSmoothScroll= function () {
+    if (Storage.smoothScroll == undefined)
+        return true;
+    else if (Storage.smoothScroll == 1)
+        return true;
+    else
+        return false;
+}
+
+
 //Mostrar ultimas abas fechadas
 Config.setShowClosedTabs = function (show) {
     if (show == true)

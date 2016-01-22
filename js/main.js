@@ -34,9 +34,9 @@ $(document).ready(function () {
                 verificaVersao();
 
                 //var gend = +new Date;
-                //document.body.innerHTML += 'bg ready:' + (bgready - gstart)  + '<br>' ; 
+                //document.body.innerHTML += 'bg ready:' + (bgready - gstart)  + '<br>' ;
                 //document.body.innerHTML += 'init:' + (gend - bgready) ;
-                //document.body.innerHTML += gdebug;  
+                //document.body.innerHTML += gdebug;
                 return;
             }
         }
@@ -73,7 +73,7 @@ function carregarTudo() {
     carregarBackground();
 
     carregarConfigs();
-    
+
     setTimeout(carregarBookmarks, 100);
     setTimeout(carregarApps, 100);
     setTimeout(carregarUltimasAbas, 100);
@@ -200,14 +200,14 @@ function htmlListaBookmarks(lista, ul) {
         var img = $("<img height='16' width='16'></img>");
         var a = $("<a></a>");
 
-        var iconSrc = favorito.url 
-                        ? "chrome://favicon/size/16@1x/" + favorito.url 
+        var iconSrc = favorito.url
+                        ? "chrome://favicon/size/16@1x/" + favorito.url
                         : 'imgs/bookmarks/folder-mac.png';
 
         // bookmarks bar icons are loaded instantly
         if (favorito.parentId < 2) {
-            img.attr("src", iconSrc); 
-        } 
+            img.attr("src", iconSrc);
+        }
         // loading other icons is delayed to stay fast
         else {
             img.attr("data-src", iconSrc);
@@ -303,7 +303,7 @@ function setCores(corPrimaria, corSecundaria, corFonte) {
 
     //configEvents();
     $(".tile").each(function(){ Tile.refreshBorder($(this)) });
-    
+
     $(".temas .configSelectedColorBg").css("background-color", corPrimaria);
     $(".temas .configSelectedColorTile").css("background-color", corSecundaria);
 }
@@ -351,6 +351,11 @@ function carregarConfigs() {
         $("#chkHideAddButton").removeAttr("checked");
 
 
+    if (Config.getSmoothScroll() == true) {
+        $("#smoothScroll").attr("checked", "checked");
+    } else {
+        $("#smoothScroll").removeAttr("checked");
+    }
     if (Config.getShowClosedTabs() == true) {
         $("#divClosedTabs").css('display', '');
         $("#chkShowTabs").attr("checked", "checked");
@@ -416,14 +421,14 @@ function configEvents() {
     $("body").on('contextmenu', '.bg, #main', function(e) {
 
         // leave tile right click alone
-        if ($(e.target).closest('.tile').length) 
+        if ($(e.target).closest('.tile').length)
           return true;
 
-        var rect = { 
-            left: e.clientX, 
-            right: '', 
-            top: e.clientY, 
-            bottom: '' 
+        var rect = {
+            left: e.clientX,
+            right: '',
+            top: e.clientY,
+            bottom: ''
         };
         if (e.clientX > window.innerWidth - $('.config').outerWidth()) {
             rect.right = window.innerWidth - e.clientX;
@@ -457,9 +462,9 @@ function configEvents() {
         $(".footer > div > ul").hide();
         $(".footer > div > div").hide();
     });
-    
+
     $(".config").clickOutside(function (e) {
-        if ($(e.target).is('.btConfig')) 
+        if ($(e.target).is('.btConfig'))
             return true;
         $(".config").hide(200);
         $(".config .temas").hide(200);
@@ -498,7 +503,6 @@ function configEvents() {
         windowResize();
     });
 
-    //Animação inicial dos tiles
     $("#chkTilesAnimation").unbind("change");
     $("#chkTilesAnimation").change(function () {
         if ($(this).is(":checked")) {
@@ -531,6 +535,15 @@ function configEvents() {
         } else {
             Config.setHideAddButton(false);
             $(".btnAddTile").css("opacity", ".2");
+        }
+    });
+
+    $("#smoothScroll").unbind("change");
+    $("#smoothScroll").change(function () {
+        if ($(this).is(":checked")) {
+            Config.setSmoothScroll(true);
+        } else {
+            Config.setSmoothScroll(false);
         }
     });
 
@@ -785,9 +798,9 @@ function configEvents() {
                 });
             });
         }
-        
+
         return false;
-        
+
     });
 }
 
@@ -1056,7 +1069,7 @@ function resizeMainHorizontal(posicionar) {
     //tamanho do scroll
     var ts = 7;
     //qtd de colunas q vão caber na tela
-    
+
     //espaço minimo q tem q sobrar de cada lado da div .main
     //(150px de cada seta pro lado + 80px de folga pra kda lado)
     var padding = w > 1600 ? 360 : 180;
@@ -1086,7 +1099,7 @@ function resizeMainHorizontal(posicionar) {
     rows = Math.floor((h - padding) / tileSize);
     rows = rows <= 0 ? 1 : rows;
 
-    
+
     if (rows > linhas) {
         rows = linhas;
     }
@@ -1107,7 +1120,7 @@ function resizeMainVertical(posicionar) {
     var t = Tile.TileSize1() + 4;
     //Height da janela
     var h = $(window).height();
-    
+
     var linhas = Tile.getLinhas();
 
     h2 = linhas * t;
@@ -1188,12 +1201,14 @@ function resizeMainApps() {
 }
 
 function windowScroll() {
-    addDependencyFunction('smoothScroll', function () {
-        $(".config").smoothScroll({ speed: 300 });
-        $("#main").smoothScroll({ speed: 300, snap: true, delta: Tile.TileSize1() + 4 });
-        $("#mainApps").smoothScroll({ snap: true, delta: 180 });
-        $(".footer .item").smoothScroll({ speed: 50 });
-    });
+    if (Config.getSmoothScroll() == true){
+        addDependencyFunction('smoothScroll', function () {
+            $(".config").smoothScroll({ speed: 300 });
+            $("#main").smoothScroll({ speed: 300, snap: true, delta: Tile.TileSize1() + 4 });
+            $("#mainApps").smoothScroll({ snap: true, delta: 180 });
+            $(".footer .item").smoothScroll({ speed: 50 });
+        });
+    }
 }
 
 function alert(title, message) {

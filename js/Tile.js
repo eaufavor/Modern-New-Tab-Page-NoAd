@@ -188,7 +188,7 @@ Tile.prototype.Html = function (preview) {
     if (this.RssUrl) {
         h2Feed.html(this.Nome);
 
-        if (  this.LastFeedTitle && this.LastFeedTitle.length > 0 && 
+        if (  this.LastFeedTitle && this.LastFeedTitle.length > 0 &&
               this.LastFeedUrl && this.LastFeedUrl.length > 0) {
 
             pFeed.html(this.LastFeedTitle);
@@ -219,7 +219,7 @@ Tile.prototype.Html = function (preview) {
 Tile.refreshBorder = function (aTile) {
     var pageBg = hex2rgb(corPrimaria);
     var tileBg = aTile[0].style.backgroundColor
-                   ? rgb2hex(aTile[0].style.backgroundColor) 
+                   ? rgb2hex(aTile[0].style.backgroundColor)
                    : corSecundaria;
     tileBg = hex2rgb(tileBg);
 
@@ -230,7 +230,7 @@ Tile.refreshBorder = function (aTile) {
     // border
     if (isColorHighLumen(pageBg))
         var border = darkBorderColorFromBackground(tileBg);
-    else 
+    else
         var border = brightBorderColorFromBackground(tileBg);
     border = "rgb(" + [border.r, border.g, border.b].join(',') + ')';
     aTile.css("border", "1px solid " + border);
@@ -690,7 +690,7 @@ function RecalcularTamanho(pct) {
     Resize(".tile .fullTile .feed h2", "height", "px", pct);
     Resize(".tile.size1 .fullTile .feed", "font-size", "px", pct);
     Resize(".tile.size2 .fullTile .feed", "font-size", "px", pct);
-    
+
     Resize(".btnAddTile", "height", "px", pct);
     Resize(".btnAddTile", "width", "px", pct);
     Resize(".tile p.tileNameP", "font-size", "px", pct);
@@ -829,7 +829,7 @@ function dragStop(e, ui) {
     ui.helper.css('top',  ui.position.top + draggableOffset.top - draggableScrollTop);
 
     // revert animation start
-    setTimeout(function () { 
+    setTimeout(function () {
         ui.helper.css("-webkit-transition", "");
         ui.helper.css('left', left + draggableOffset.left);
         ui.helper.css('top',  top  + draggableOffset.top - draggableScrollTop);
@@ -842,7 +842,7 @@ function dragStop(e, ui) {
         ui.helper.css("position", "");
         ui.helper.css('left', left);
         ui.helper.css('top',  top);
-        setTimeout(function () { 
+        setTimeout(function () {
             ui.helper.css("-webkit-transition", "");
         }, 1);
     });
@@ -906,7 +906,7 @@ function AnimaTile(tile) {
         if (tileAnimationQueue.length == 1) {
             setTimeout(tileAnimationQueue[0], 500);
         }
-    } 
+    }
 }
 
 function TileEvents() {
@@ -1031,7 +1031,7 @@ function ConfigTile(id) {
                             var r = $(result);
 
                             //Nome do site
-                            var tagsNome = ['name', 'og:title', 
+                            var tagsNome = ['name', 'og:title',
                                             'og:site_name', 'application-name'];
                             var nomes = getMetaTags(r, tagsNome);
                             var menorNome = nomes.sort(function (a, b) { return a.length - b.length; })[0];
@@ -1083,7 +1083,7 @@ function ConfigTile(id) {
                                 imgs = getMetaTags(r, tagsImagem);
                             }
 
-                            var tagCor = ['msapplication-tilecolor', 
+                            var tagCor = ['msapplication-tilecolor',
                                           'msapplication-navbutton-color'];
                             var cor = getMetaTags(r, tagCor);
                             if (cor.length > 0) {
@@ -1306,10 +1306,10 @@ function ConfigTile(id) {
 
         $(".imageList").lightbox_me({ centered: true, lightboxSpeed: 100 });
         /*
-        $(".imageList").lightbox_me({ 
-                    centered: true, 
-                    lightboxSpeed: 100, 
-                    overlayCSS: {opacity:0} 
+        $(".imageList").lightbox_me({
+                    centered: true,
+                    lightboxSpeed: 100,
+                    overlayCSS: {opacity:0}
         });
         */
     });
@@ -1519,7 +1519,7 @@ function RecalculaAnimacao() {
         lastSheet.insertRule(css, lastSheet.cssRules.length);
     }
 
-    
+
     /*$(".tile .fullTile").each(function(){
         if ($(this).find('.feed').length)
             $(this).css("-webkit-animation-name", newName);
@@ -1549,7 +1549,7 @@ function getMetaTags(html, tags) {
         var tagName = tag[0].tagName;
 
         if (tagName == 'META' || tagName == 'LINK') {
-            var props = [ tag.attr("name"), tag.attr("property"), tag.attr("itemprop"), 
+            var props = [ tag.attr("name"), tag.attr("property"), tag.attr("itemprop"),
                          tag.attr("http-equiv"), tag.attr("type"), tag.attr("rel") ];
 
             for (var p = 0; p < props.length; p++) {
@@ -1668,21 +1668,21 @@ function isColorBright(rgb) {
 function isColorDark(rgb) {
     var o = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
     if (rgbToHsl(rgb).s < 0.12) { // grayish
-        return (o < 120);  
+        return (o < 120);
     } else {
         return (o < 60);
     }
 }
 function isColorVeryDark(rgb) {
     var o = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
-    return (o < 60);  
+    return (o < 60);
 }
 function isColorVeryBright(rgb) {
     var o = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
     return (o > 150);
 }
 function isColorHighLumen(rgb) {
-    return (rgbToHsl(rgb).l > 0.4);  
+    return (rgbToHsl(rgb).l > 0.4);
 }
 
 // old implementation
@@ -1711,4 +1711,3 @@ function rgbToHsl(rgb) {
 
     return {h: h, s: s, l: l};
 }
-

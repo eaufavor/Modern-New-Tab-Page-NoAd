@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="js/colorPicker/css/colorpicker.css" rel="stylesheet" />
 
-    <!--    
+    <!--
     <link href="css/style.min.css?v=20140120" rel="stylesheet" type="text/css" />
     <link href="js/colorPicker/css/colorpicker.min.css?v=20140120" rel="stylesheet" />
     <script src="js/GDrive.js"></script>
@@ -25,7 +25,7 @@
 
         <div class="main pausado" id="main" >
         </div>
-        
+
         <div class="main pausado" id="mainApps" style="-webkit-transform: translate(5000px);">
         </div>
 
@@ -37,7 +37,7 @@
             <div class="results" style="display:none;">
             </div>
         </div>
-        
+
         <div class="goLeft" style="display: none;"></div>
         <div class="goRight"></div>
 
@@ -51,7 +51,7 @@
                     <div class="configSelectedColorBg">
                         <div class="configSelectedColorTile"></div>
                     </div>
-                    
+
 
                     <div class="moreColors">
                         <a id="btnCustomColor" data-message="option_colors_custom">custom...</a>
@@ -59,7 +59,7 @@
                 </div>
 
                 <div style="clear: both;"></div>
-                
+
             </div>
 
             <p data-message="option_backgroundImage">Background image</p>
@@ -69,7 +69,7 @@
                     <div class="campo" style="margin-top: 10px;">
                         <span data-message="option_backgroundImage_opacity">
                             opacity:&nbsp;
-                        </span> 
+                        </span>
                         <input id="txtOpacity" type="number" value="0.8" min="0" max="1" step=".1" />
                     </div>
                     <div class="campo">
@@ -155,7 +155,7 @@
                     <div id="divFontColor" class="selectedConfigColor"></div>
                 </div>
             </div>
-            
+
             <div class="configButtons">
                 <input type="button" value="remove" class="btnRemove" data-message-value="tc_remove" />
                 <input type="button" value="save " class="btnSave" data-message-value="tc_save" />
@@ -344,39 +344,47 @@
                 <input id="sldAnimationSpeed" type="range" min="0" max="2000" />
                 <span class="test" data-message="mo_inicialTilesAnimation_preview">preview</span>
             </p>
+
             <!--
             <p>
-                <label for="chkHideAddButton" data-message="mo_hideAddTileButton">Hide the "Add Tile" (+) button:</label> 
+                <label for="chkHideAddButton" data-message="mo_hideAddTileButton">Hide the "Add Tile" (+) button:</label>
                 <input id="chkHideAddButton" type="checkbox" />
                 <br />
                 <span class="details" data-message="mo_hideAddTileButton_desc">(it will show up only on mouse over)</span>
             </p>
             -->
             <p>
-                <label for="chkShowTabs" data-message="mo_showRecentlyClosedTabs">Show recently closed tabs:</label> 
+                <label for="chkShowTabs" data-message="mo_showRecentlyClosedTabs">Show recently closed tabs:</label>
                 <input id="chkShowTabs" type="checkbox" />
                 <br />
                 <span class="details" data-message="mo_showRecentlyClosedTabs_desc">(small button at the footer)</span>
             </p>
 
             <p>
-                <label for="chkShowBookmarks" data-message="mo_showBookmarks">Show bookmarks:</label> 
+                <label for="smoothScroll" >Using smooth scroll:</label>
+                <input id="smoothScroll" type="checkbox" />
+                <br />
+                <span class="details" >(need to refresh to take effect)</span>
+            </p>
+
+            <p>
+                <label for="chkShowBookmarks" data-message="mo_showBookmarks">Show bookmarks:</label>
                 <input id="chkShowBookmarks" type="checkbox" />
                 <br />
                 <span class="details" data-message="mo_showBookmarks_desc">(small button at the footer)</span>
             </p>
 
             <p>
-                <label for="chkShowAppsSeparatePage" data-message="mo_showAppsSeparatePage">Show apps on a separate page:</label> 
+                <label for="chkShowAppsSeparatePage" data-message="mo_showAppsSeparatePage">Show apps on a separate page:</label>
                 <input id="chkShowAppsSeparatePage" type="checkbox" />
                 <br />
                 <span class="details" data-message="mo_showAppsSeparatePage_desc">(instead of a button at the footer)</span>
             </p>
 
             <p>
-                <label data-message="mo_footerPosition">Footer position:</label> 
+                <label data-message="mo_footerPosition">Footer position:</label>
                 <span class="details" data-message="mo_footerPosition_desc">(Bookmarks and Recently closed tabs buttons)</span>
-                
+
                 <span class="footerPosition">
                     <input id="rdTopLeft" name="footerPosition" type="radio" title="Top left" data-message-title="mo_footerPosition_topLeft" />
                     <input id="rdTopRight" name="footerPosition" type="radio" title="Top right" data-message-title="mo_footerPosition_topRight" />
@@ -416,7 +424,7 @@
         </div>
 
         <div class="footer">
-            
+
             <div class="item closedTabs" id="divClosedTabs" style="display: none;">
                 <p data-message="recentlyClosedTabs">Recently closed tabs</p>
                 <ul style="display: none;">
@@ -455,7 +463,9 @@
 <script src="js/Search.js"></script>
 <script src="js/Config.js"></script>
 <script src="js/lazyloader.js"></script>
+<script src="js/jquery.lightbox_me.js"></script>
 <!--
+
 <script src="js/colorPicker/js/colorpicker.min.js"></script>
 <script src="js/smoothScroll.js"></script>
 <script src="js/jquery.lightbox_me.js"></script>

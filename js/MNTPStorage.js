@@ -10,6 +10,7 @@
     _hideAddButton,
     _rowNumber,
     _columnNumber,
+    _smoothScroll,
     _showClosedTabs,
     _showBookmarks,
     _showAppsSeparatePage,
@@ -188,6 +189,20 @@ MNTPStorage = {
             _columnNumber = value;
             localStorage.columnNumber = value;
         }
+    },
+
+    get smoothScroll() {
+        if (!_smoothScroll && localStorage.smoothScroll)
+            _smoothScroll = localStorage.smoothScroll;
+
+        return _smoothScroll;
+    },
+
+    set smoothScroll(value) {
+        //if (value) {
+            _smoothScroll = value;
+            localStorage.smoothScroll = value;
+        //}
     },
 
     get showClosedTabs() {
@@ -391,7 +406,7 @@ if (tiles && !localStorage.updatedGmailFeed) {
 // temporary fix for preventing auth popup when logged out
 // https://code.google.com/p/chromium/issues/detail?id=31582
 chrome.webRequest.onAuthRequired.addListener(
-    function (status) {  return {cancel: true}; }, 
-    {urls: ["*://mail.google.com/*"]}, 
+    function (status) {  return {cancel: true}; },
+    {urls: ["*://mail.google.com/*"]},
     ["blocking"]
 );
