@@ -156,9 +156,11 @@ Tile.prototype.Html = function (preview) {
 
     Tile.refreshBorder(aTile);
 
-    if (this.Cor) {
+    if (this.Cor || this.CorFonte) {
+
         var fontColor = this.CorFonte || fontColorFromBackground(hex2rgb(this.Cor));
-        aTile.css("color", fontColor);
+        pTileName.css("color", fontColor);
+        divFeed.css("color", fontColor);
     }
 
     if (this.Imagem && this.Imagem != "null") {

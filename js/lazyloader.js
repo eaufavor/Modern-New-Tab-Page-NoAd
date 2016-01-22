@@ -12,7 +12,7 @@ var queue = [
 var libs = {};
 
 function addDependencyFunction(lib, fn) {
-	if (libs[lib].loaded) 
+	if (libs[lib].loaded)
 		fn();
 	else
 		libs[lib].fn.push(fn);
