@@ -23,6 +23,9 @@ Therefore, I removed the Ads and repacked it with my private key. Chrome cannot 
 If someone wants to publish this version on Chrome Web Store, be my guest.
 
 ### Changelog
+2016.1.29
+Improve logo quality. 1. using more pixels (from 110x110 to 2200x1100) to save logo images 2.logo is 70% as large as the tab 3.auto remove transparent pixels (Credit: Remy, [code snippet](https://gist.github.com/remy/784508))
+
 2016.1.22
 Fixed font coloer problem. Add an option to disable slow smooth scroll (TODO: add a knob to adjust scroll speed)
 
