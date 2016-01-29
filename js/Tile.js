@@ -686,7 +686,9 @@ function RecalcularTamanho(pct) {
     $(".tile .fullTile").css("-webkit-animation-name", "none");
 
     Resize(".tile .fullTile .tileImg", "height", "px", pct);
-    Resize(".tile .fullTile .tileImg", "background-size", "px", pct);
+    Resize(".tileImg", "height", "px", pct*0.8);
+    //Resize(".tileImg", "width", "px", pct*0.8);
+    //Resize(".tile .fullTile .tileImg", "background-size", "px", pct);
     Resize(".tile .fullTile .feed", "height", "px", pct);
     Resize(".tile .fullTile .feed h2", "font-size", "px", pct);
     Resize(".tile .fullTile .feed h2", "height", "px", pct);
@@ -695,7 +697,7 @@ function RecalcularTamanho(pct) {
 
     Resize(".btnAddTile", "height", "px", pct);
     Resize(".btnAddTile", "width", "px", pct);
-    Resize(".tile p.tileNameP", "font-size", "px", pct);
+    Resize(".tile p.tileNameP", "font-size", "px", pct*0.8);
 
     $(".tile.size1").css("width", Tile.TileSize1() + "px");
     $(".tile.size2").css("width", Tile.TileSize2() + "px");

@@ -201,8 +201,20 @@ a {
             height: 140px;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 110px auto;
             color: inherit;
+            background-size: contain;
+            margin: 5% 5%;
+            text-align: center;
+        }
+
+        .tile.size1 .fullTile .tileImg {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        .tile.size2 .fullTile .tileImg {
+            margin-top: 5%;
+            margin-bottom: 5%;
         }
 
         .tile .fullTile .feed {
@@ -282,6 +294,7 @@ a {
         overflow: hidden;
         line-height: 140px;
         margin: 0px;
+        margin-top: -5%;
         opacity: .9;
         -webkit-transition: background-color 0.2s;
     }
@@ -643,7 +656,7 @@ input[type=button]:active {
     .btConfig:hover {
         opacity: 1;
     }
-    
+
     .btConfig:active {
         -webkit-transform:scale(.9);
     }
@@ -768,7 +781,7 @@ input[type=button]:active {
     }
 
     .configButtons {
-        clear: both; 
+        clear: both;
         padding-top: 20px;
     }
 
@@ -794,7 +807,7 @@ input[type=button]:active {
         .configTile a:active {
             top:1px;
         }
-        
+
     .configTile .preview a {
         color: #f1f1f1;
     }
@@ -1437,15 +1450,15 @@ input[type=button]:active {
 }
 
 
-.bright-bg .btConfig, 
-.bright-bg .btnAddTileNew, 
-.bright-bg .goLeft, 
+.bright-bg .btConfig,
+.bright-bg .btnAddTileNew,
+.bright-bg .goLeft,
 .bright-bg .goRight {
     -webkit-filter: brightness(0);
 }
-.bright-bg .config { 
+.bright-bg .config {
     border-color: rgba(0,0,0,.1);
-} 
+}
 .bright-bg #main::-webkit-scrollbar-track-piece {
     background-color: rgba(0,0,0,0.1);
 }

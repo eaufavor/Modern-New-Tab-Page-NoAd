@@ -1339,8 +1339,8 @@ function processaImagem(img, callback) {
     var canvas = document.createElement("canvas");
     var ctx = canvas.getContext("2d");
 
-    var MAX_WIDTH = 110;
-    var MAX_HEIGHT = 110;
+    var MAX_WIDTH = 2200;
+    var MAX_HEIGHT = 1100;
     var width = img.width;
     var height = img.height;
 
@@ -1358,16 +1358,67 @@ function processaImagem(img, callback) {
 
     canvas.width = width;
     canvas.height = height;
-    var ctx = canvas.getContext("2d");
+    // var ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0, width, height);
 
     var imgProcessada = new Image();
 
-    imgProcessada.onload = function () {
+    imgProcessada.onload = function() {
         callback(imgProcessada, img);
     }
+    // remove transparent pixels, credit: Remy Sharp https://gist.github.com/remy/784508
+    canvas2 = document.createElement('canvas');
+    copy = canvas2.getContext('2d');
+    pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    var l = pixels.data.length;
+    var i;
+    bound = {
+        top: null,
+        left: null,
+        right: null,
+        bottom: null
+    };
+    var x = 0;
+    var y = 0;
 
-    imgProcessada.src = canvas.toDataURL("image/png");
+    for (i = 0; i < l; i += 4) {
+        if (pixels.data[i + 3] !== 0) {
+            x = (i / 4) % canvas.width;
+            y = ~~((i / 4) / canvas.width);
+
+            if (bound.top === null) {
+                bound.top = y;
+            }
+
+            if (bound.left === null) {
+                bound.left = x;
+            } else if (x < bound.left) {
+                bound.left = x;
+            }
+
+            if (bound.right === null) {
+                bound.right = x;
+            } else if (bound.right < x) {
+                bound.right = x;
+            }
+
+            if (bound.bottom === null) {
+                bound.bottom = y;
+            } else if (bound.bottom < y) {
+                bound.bottom = y;
+            }
+        }
+    }
+
+ var trimHeight = bound.bottom - bound.top,
+     trimWidth = bound.right - bound.left,
+     trimmed = ctx.getImageData(bound.left, bound.top, trimWidth, trimHeight);
+
+ copy.canvas.width = trimWidth;
+ copy.canvas.height = trimHeight;
+ copy.putImageData(trimmed, 0, 0);
+
+    imgProcessada.src = canvas2.toDataURL("image/png");
 }
 
 function translate() {
