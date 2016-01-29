@@ -685,8 +685,8 @@ Tile.PosicionarTilesVertical = function (linhaBase, colunaBase, colunas) {
 function RecalcularTamanho(pct) {
     $(".tile .fullTile").css("-webkit-animation-name", "none");
 
-    Resize(".tile .fullTile .tileImg", "height", "px", pct);
-    Resize(".tileImg", "height", "px", pct*0.8);
+    Resize(".tile .fullTile .tileImg", "height", "px", pct*0.7);
+    //Resize(".tileImg", "height", "px", pct*0.7);
     //Resize(".tileImg", "width", "px", pct*0.8);
     //Resize(".tile .fullTile .tileImg", "background-size", "px", pct);
     Resize(".tile .fullTile .feed", "height", "px", pct);
@@ -697,14 +697,14 @@ function RecalcularTamanho(pct) {
 
     Resize(".btnAddTile", "height", "px", pct);
     Resize(".btnAddTile", "width", "px", pct);
-    Resize(".tile p.tileNameP", "font-size", "px", pct*0.8);
+    Resize(".tile p.tileNameP", "font-size", "px", pct);
 
     $(".tile.size1").css("width", Tile.TileSize1() + "px");
     $(".tile.size2").css("width", Tile.TileSize2() + "px");
     $(".tile").css("height", Tile.TileSize1() + "px");
     //$(".tile").css("zoom", pct/100);
 
-    $(".tile p.tileNameP").css("line-height", 140*pct/100 + 'px');
+    //$(".tile p.tileNameP").css("line-height", 140*pct/100 + 'px');
     //$(".tile p.tileNameP").css("top", Math.floor((Tile.TileSize1() - 37 * pct / 100)) + "px");
 
     RecalculaAnimacao();

@@ -203,18 +203,18 @@ a {
             background-position: center;
             color: inherit;
             background-size: contain;
-            margin: 5% 5%;
+            margin: 7.5% 7.5%;
             text-align: center;
         }
 
         .tile.size1 .fullTile .tileImg {
-            margin-top: 10%;
-            margin-bottom: 10%;
+            margin-top: 15%;
+            margin-bottom: 15%;
         }
 
         .tile.size2 .fullTile .tileImg {
-            margin-top: 5%;
-            margin-bottom: 5%;
+            margin-top: 7.5%;
+            margin-bottom: 7.5%;
         }
 
         .tile .fullTile .feed {
@@ -294,9 +294,9 @@ a {
         overflow: hidden;
         line-height: 140px;
         margin: 0px;
-        margin-top: -5%;
         opacity: .9;
         -webkit-transition: background-color 0.2s;
+        transform: translateY(-7.5%);
     }
 
     .tile .resize {
