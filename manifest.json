@@ -3,7 +3,7 @@
 
   "name": "Modern New Tab Page",
   "description": "Modern New Tab Page replaces the traditional new tab page by a new beautiful and elegant one, made of customizable live tiles.",
-  "version": "2016.1.22",
+  "version": "2016.1.29",
   "incognito": "split",
   "icons": {
 	"16":  "icon16.png",
