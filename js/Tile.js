@@ -128,8 +128,9 @@ Tile.prototype.Html = function (preview) {
     var divEdit = $("<div class='edit' title='edit'></div>");
 
     var url = this.Url;
-    if (url.indexOf("http://") == -1 && url.indexOf("https://") == -1)
+    if (url.indexOf("http://") == -1 && url.indexOf("https://") == -1 && url.indexOf("chrome://") == -1){
         url = "http://" + url;
+    }
 
     if (!preview) {
         aTile.addClass("tile");
@@ -137,7 +138,15 @@ Tile.prototype.Html = function (preview) {
 
         aTile.attr("id", "tile-" + this.Id);
         aTile.attr("data-id", this.Id);
-        aTile.attr("href", url);
+        if (url.indexOf("chrome://") == -1){
+            aTile.attr("href", url);
+        }
+        else{
+            aTile.attr("href", url);
+            aTile.attr("chref", url);
+            aTile.addClass("chromeUrl");
+            //aTile.attr("onclick", 'chromeOpen(this.href);');
+        }
 
         if (Tile.primeiroPosicionamento)
             aTile.addClass("firstLoad");
@@ -928,6 +937,24 @@ function TileEvents() {
     });
     */
 
+    $('.chromeUrl').each(function(i, obj) {
+        return;
+        obj.addEventListener("click", function(event) {
+            if ('edit' == event.target.className || 'resize' == event.target.className){
+                return;
+            }
+            chrome.tabs.update(null, {url: obj.getAttribute("chref")});
+        }, false);
+    });
+    $(".main").on("click", ".chromeUrl", function (e) {
+        //alert(e.target.className);
+        if ('edit' == e.target.className || 'resize' == e.target.className){
+            return;
+        }
+        var aDom = $(e.target).closest('.chromeUrl');
+        console.log(aDom[0].href);
+        chrome.tabs.update(null, {url: aDom[0].href});
+    });
     $(".main").on("click", ".tile .resize", function (e) {
         try {
             var tileDom = $(e.target).closest('.tile');
@@ -962,9 +989,7 @@ function TileEvents() {
         ConfigTile($(e.target).closest('.tile').data("id"));
         return false;
     });
-
-    $(".configTile .tile .resize").click(function () {
-
+    $(".configTile .tile .resize").click(function (e) {
         var tileDom = $(this).parent();
 
         tileDom.toggleClass("size1").toggleClass("size2");
@@ -1017,7 +1042,7 @@ function ConfigTile(id) {
             var urlOriginal = val;
             var url = urlOriginal;
 
-            if (url.indexOf("http://") == -1 && url.indexOf("https://") == -1)
+            if (url.indexOf("http://") == -1 && url.indexOf("https://") == -1 && url.indexOf("chrome://") == -1)
                 url = "http://" + url;
 
             var loader = $(".loader");

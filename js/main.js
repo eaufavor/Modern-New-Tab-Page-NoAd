@@ -1204,7 +1204,7 @@ function windowScroll() {
     if (Config.getSmoothScroll() == true){
         addDependencyFunction('smoothScroll', function () {
             $(".config").smoothScroll({ speed: 300 });
-            $("#main").smoothScroll({ speed: 300, snap: true, delta: Tile.TileSize1() + 4 });
+            $("#main").smoothScroll({ speed: 100, snap: true, delta: Tile.TileSize1() + 4 });
             $("#mainApps").smoothScroll({ snap: true, delta: 180 });
             $(".footer .item").smoothScroll({ speed: 50 });
         });
