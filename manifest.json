@@ -3,7 +3,7 @@
 
   "name": "Modern New Tab Page",
   "description": "Modern New Tab Page replaces the traditional new tab page by a new beautiful and elegant one, made of customizable live tiles.",
-  "version": "2016.2.4",
+  "version": "2016.3.11",
   "incognito": "split",
   "icons": {
 	"16":  "icon16.png",
@@ -22,7 +22,8 @@
 		"history",
 		"bookmarks",
     "webRequest",
-    "webRequestBlocking"
+    "webRequestBlocking",
+    "unlimitedStorage"
   ],
   "background": {
     "page": "background.html"
