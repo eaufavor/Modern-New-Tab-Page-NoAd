@@ -23,6 +23,9 @@ Therefore, I removed the Ads and repacked it with my private key. Chrome cannot 
 If someone wants to publish this version on Chrome Web Store, be my guest.
 
 ### Changelog
+2016.3.11
+Add unlimited storage permission to avoid crash when adding a lot tiles.
+
 2016.2.4
 Fixed Urls for chrome://. Speed up smooth scroll.
 
